@@ -1,76 +1,101 @@
 # 🚀 Project Hyperion
 
 <p align="center">
-  <a href="https://github.com/<dileep-u-k>/project-hyperion/actions/workflows/ci.yml"><img src="https://github.com/<your-github-username>/project-hyperion/actions/workflows/ci.yml/badge.svg" alt="Build and Test"></a>
-  <a href="https://github.com/<dileep-u-k>/project-hyperion/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="license"></a>
-  <a href="https://github.com/<dileep-u-k>/project-hyperion/graphs/contributors"><img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat" alt="contributions welcome"></a>
+  <a href="https://github.com/dileep-u-k/project-hyperion/actions/workflows/ci.yml"><img src="https://github.com/dileep-u-k/project-hyperion/actions/workflows/ci.yml/badge.svg" alt="Build and Test Status"></a>
+  <a href="https://github.com/dileep-u-k/project-hyperion/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="Project License"></a>
+  <a href="https://github.com/dileep-u-k/project-hyperion/issues"><img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat" alt="Contributions Welcome"></a>
 </p>
 
 <p align="center">
-  An autonomous, planetary-scale AI fabric that uses reinforcement learning to orchestrate workloads across hybrid cloud (AWS, GCP, Azure) and edge devices, built with Go and Rust.
+  <table>
+    <tr>
+      <td><strong>Status</strong></td>
+      <td><strong>Technology Stack</strong></td>
+      <td><strong>Core Goal</strong></td>
+    </tr>
+    <tr>
+      <td><code>Phase 0: Architectural Blueprint</code></td>
+      <td>Go, Rust, Kubernetes, RLlib, QUIC</td>
+      <td>Reduce AI workload cost & latency by 90%</td>
+    </tr>
+  </table>
 </p>
 
 ---
 
-## 🔭 Vision
+> ### **The Problem**
+> Running AI at planetary-scale is a battle against two forces: **cost and latency**. Deploying models on powerful cloud GPUs is expensive and slow for end-users. Deploying on the edge is fast but complex and hard to manage. How can you get the best of both worlds without an army of infrastructure engineers?
 
-The future of AI is distributed. However, managing AI workloads across a heterogeneous mix of public clouds, private data centers, and edge devices is cripplingly complex and expensive. **Project Hyperion** is an AI-defined infrastructure project designed to solve this. It creates a single, intelligent control plane that treats the world's compute as one unified resource.
+### **The Solution: An Autonomous AI Fabric**
 
-By using a state-of-the-art Reinforcement Learning scheduler, Hyperion autonomously and continuously optimizes the placement of AI training and inference workloads, aiming to **reduce combined cost and latency by up to 90%** compared to static, manually managed infrastructure.
+**Project Hyperion** answers this challenge with an autonomous, AI-defined control plane that transforms a global, heterogeneous collection of compute resources—from massive cloud GPUs to tiny edge devices—into a single, intelligent, self-optimizing fabric.
 
-## ✨ Core Features
+It uses **Reinforcement Learning** to learn the optimal placement for any AI workload, autonomously shifting tasks between cloud and edge to slash costs and crush latency. Think of it as a cloud architect and a global network engineer, condensed into a single, intelligent system.
 
-* **🧠 AI-Powered Scheduling:** A self-learning scheduler, built on Reinforcement Learning, that makes real-time placement decisions based on cost, latency, resource utilization, and user-defined policies across a global fleet of nodes.
+---
 
-* **⚡ High-Performance Networking Fabric:** A multi-layer communication fabric built on gRPC over QUIC, enabling secure, sub-10ms control and data plane operations, which is critical for latency-sensitive edge AI applications.
+### ✨ **Core Features**
 
-* **❤️‍🩹 Predictive Self-Healing:** The system uses time-series ML models on Prometheus telemetry to anticipate node failures and network degradation, proactively rebalancing workloads *before* an outage occurs, ensuring extreme resilience.
+* **🧠 Intelligent & Adaptive Scheduling:** Leverages a Reinforcement Learning model that continuously learns and adapts to real-world conditions. It makes optimal placement decisions based on a rich set of telemetry including cloud spot pricing, network latency, GPU utilization, and carbon efficiency.
 
-## 🏛️ Architecture
+* **⚡ High-Performance Global Fabric:** Built on a foundation of **gRPC over QUIC**, the fabric provides a secure, low-latency communication layer essential for real-time control over distributed edge devices, enabling sub-10ms scheduling decisions.
 
-The full architectural details are available in our **[Project Hyperion Whitepaper](./docs/whitepaper.md)**.
+* **❤️‍🩹 Predictive & Proactive Healing:** Utilizes time-series ML models on Prometheus metrics to anticipate node failures and network degradation. It proactively rebalances workloads *before* an outage occurs, ensuring a level of resilience far beyond traditional reactive systems.
 
-### High-Level Overview
+---
 
-Hyperion creates a unified control plane that spans multiple cloud providers and a distributed network of edge devices. Users interact with a single, Kubernetes-native API to deploy workloads, and the Hyperion scheduler handles the rest.
+### 🏛️ **Architecture**
 
+A complete system design, including API specifications and data models, is detailed in the:
 
-*A 10,000-foot view of the Hyperion Fabric, showing the unified control plane managing resources across AWS, GCP, Azure, and the Edge.*
+### **[➡️ Project Hyperion Whitepaper](./docs/whitepaper.md) ⬅️**
 
-### Control Plane & Node Architecture
+![Architecture Overview](./docs/architecture-overview.svg)
+*Figure 1: Hyperion unifies public clouds and distributed edge nodes into a single, intelligent fabric.*
 
-The control plane is implemented as a Kubernetes Operator in **Go** for robustness and cloud-native integration. A high-performance agent, written in **Rust** for safety and speed, runs on every cloud and edge node, forming the backbone of the distributed system.
+---
 
+### 💻 **Key Technologies**
 
-*Detailed view of the Go-based Control Plane interacting with a Rust-based Node Agent.*
+| Category                  | Technologies                                           |
+| ------------------------- | ------------------------------------------------------ |
+| **Infra & Control Plane** | Go, Rust, Kubernetes (Operators), etcd                 |
+| **AI & Scheduling** | Python, RLlib (Ray), PyTorch                           |
+| **Edge & Networking** | gRPC, QUIC, Istio, Envoy, NVIDIA Jetson                |
+| **Observability** | Prometheus, Grafana, Jaeger                            |
 
-## 🚦 Project Status
+---
+
+### 🚦 **Project Status**
 
 **Current Phase:** `Phase 0: The Architect's Blueprint`
 
-Project Hyperion is currently in its foundational phase. The core architecture has been designed, the research has been synthesized, and the professional development environment is in place. The next phase involves implementing the core orchestration logic.
+The project's foundational architecture and professional development environment are now complete. The next phase focuses on implementing the core orchestration logic. See the full plan in our [whitepaper](./docs/whitepaper.md).
 
-## 🛠️ Getting Started
+---
 
-> **Note:** The project is not yet in a runnable state. This section will be updated as the core components are built.
+### 🛠️ **Getting Started**
 
-The future steps to build and run the project will be:
+> **Note:** The project is not yet in a runnable state. This section outlines the future build process.
 
+#### **Prerequisites**
+* Go (v1.21+)
+* Rust (stable)
+* Docker & Docker Compose
+* `kubectl`
+
+#### **Installation**
 ```bash
 # Clone the repository
-git clone [https://github.com/](https://github.com/)<dileep-u-k>/project-hyperion.git
+git clone [https://github.com/dileep-u-k/project-hyperion.git](https://github.com/dileep-u-k/project-hyperion.git)
 cd project-hyperion
 
 # Build the Go operator and Rust agent (Makefile target to be added)
 make build
 
-# Run tests
+# Run tests to verify the setup
 make test
-
-🗺️ Roadmap
-
-Our vision and execution plan are detailed in the Project Hyperion Whitepaper. The whitepaper provides a comprehensive overview of the system's design, API specifications, and the phased implementation plan
 
 🤝 Contributing
 
-This is a single-person project for portfolio purposes, but all feedback, ideas, and suggestions are welcome. Please open an issue to discuss any thoughts you may have on the architecture or implementation.
+This is a portfolio project designed to showcase a deep understanding of distributed systems and AI infrastructure. All feedback, architectural suggestions, and questions are highly encouraged. Please open an issue to start a discussion.
